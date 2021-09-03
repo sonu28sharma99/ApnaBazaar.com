@@ -15,7 +15,7 @@ function App() {
         <header className="row">
           <div>
             <Link className="brand" to="/">
-              ApnaBazaar
+              ApnaBazaar.com
             </Link>
           </div>
           <div>
