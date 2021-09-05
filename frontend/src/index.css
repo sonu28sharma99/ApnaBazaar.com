@@ -13,6 +13,7 @@ body {
 #root {
   height: 100%;
 }
+
 /* Layout */
 .grid-container {
   display: grid;
@@ -46,6 +47,7 @@ h2 {
   font-size: 1.6rem;
   padding: 1rem 0;
 }
+
 a {
   text-decoration: none;
 }
@@ -60,7 +62,6 @@ ul {
 li {
   margin-top: 1rem;
 }
-
 input,
 select,
 textarea,
@@ -73,8 +74,7 @@ button {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-button{
+button {
   background-color: #f8f8f8;
   cursor: pointer;
 }
@@ -129,6 +129,7 @@ a.brand {
 .min-30 {
   min-width: 30rem;
 }
+
 /* Image */
 img {
   border-radius: 0.5rem;
@@ -173,21 +174,19 @@ img.large {
 .success {
   color: #20a020;
 }
-.error {
+.danger {
   color: #a02020;
 }
-.alert{
+.alert {
   padding: 1rem;
   border: 0.1rem solid transparent;
   border-radius: 0.5rem;
 }
-
-.alert-info{
-  color:#2020a0;
-  background-color:#e0e0ff;
+.alert-info {
+  color: #2020a0;
+  background-color: #e0e0ff;
 }
-
-.alert-danger{
-  color:#a02020;
-  background-color:#ffe0e0e0;
+.alert-danger {
+  color: #a02020;
+  background-color: #ffe0e0;
 }
