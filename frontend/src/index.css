@@ -18,9 +18,9 @@ body {
 .grid-container {
   display: grid;
   grid-template-areas:
-    "header"
-    "main"
-    "footer";
+    'header'
+    'main'
+    'footer';
   grid-template-columns: 1fr;
   grid-template-rows: 5rem 1fr 5rem;
   height: 100%;
@@ -74,12 +74,10 @@ button {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 button {
   background-color: #f8f8f8;
   cursor: pointer;
 }
-
 input:hover,
 select:hover,
 textarea:hover,
@@ -128,7 +126,6 @@ a.brand {
 .col-2 {
   flex: 2 1 50rem;
 }
-
 .min-30 {
   min-width: 30rem;
 }

@@ -94,6 +94,9 @@
     2. add reducer to store.js
     3. use action in ProductScreen.js
     4. add /api/product/:id to backend api
+14. Handle Add To Cart Button
+    1. Handle Add To Cart in ProductScreen.js
+    2. create CartScreen.js
 15. Implement Add to Cart Action
     1. create addToCart constants, actions and reducers
     2. add reducer to store.js
@@ -105,8 +108,22 @@
     3. show item image, name, qty and price
     4. Proceed to Checkout button
     5. Implement remove from cart action
-
 17. Implement Remove From Cart Action
     1. create removeFromCart constants, actions and reducers
     2. add reducer to store.js
     3. use action in CartScreen.js
+18. Create Sample Users In MongoDB
+    1. npm install mongoose
+    2. connect to mongodb
+    3. create config.js
+    4. npm install dotenv
+    5. export MONGODB_URL
+    6. create models/userModel.js
+    7. create userSchema and userModel
+    8. create userRoute
+    9. Seed sample data
+19. Create Sample Products In MongoDB
+    1. create models/productModel.js
+    2. create productSchema and productModel
+    3. create productRoute
+    4. Seed sample data

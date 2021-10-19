@@ -8,17 +8,18 @@ import ProductScreen from './screens/ProductScreen';
 function App() {
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
+
   return (
     <BrowserRouter>
       <div className="grid-container">
         <header className="row">
           <div>
-          <Link className="brand" to="/">
+            <Link className="brand" to="/">
               amazona
             </Link>
           </div>
           <div>
-          <Link to="/cart">
+            <Link to="/cart">
               Cart
               {cartItems.length > 0 && (
                 <span className="badge">{cartItems.length}</span>
