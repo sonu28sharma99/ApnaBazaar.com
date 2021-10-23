@@ -2,6 +2,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import donenv from 'dotenv';
 import productRouter from './routers/productRouter.js';
+import orderRouter from './routers/orderRouter.js';
 import userRouter from './routers/userRouter.js';
 
 donenv.config();
@@ -18,6 +19,8 @@ mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/amazona', {
 
 app.use('/api/users', userRouter);
 app.use('/api/products', productRouter);
+app.use('/api/orders', orderRouter);
+
 app.get('/', (req, res) => {
   res.send('Server is ready');
 });
