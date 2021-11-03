@@ -30,10 +30,7 @@ export const orderCreateReducer = (state = {}, action) => {
   }
 };
 
-export const orderDetailsReducer = (
-  state = { loading: true },
-  action
-) => {
+export const orderDetailsReducer = (state = { loading: true }, action) => {
   switch (action.type) {
     case ORDER_DETAILS_REQUEST:
       return { loading: true };
@@ -60,7 +57,6 @@ export const orderPayReducer = (state = {}, action) => {
       return state;
   }
 };
-
 export const orderMineListReducer = (state = { orders: [] }, action) => {
   switch (action.type) {
     case ORDER_MINE_LIST_REQUEST:

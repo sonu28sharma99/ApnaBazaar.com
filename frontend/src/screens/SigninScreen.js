@@ -9,9 +9,11 @@ export default function SigninScreen(props) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const redirect = props.location.search? props.location.search.split('=')[1]:'/';
+  const redirect = props.location.search
+    ? props.location.search.split('=')[1]
+    : '/';
 
-  const userSignin = useSelector((state)=> state.userSignin);
+  const userSignin = useSelector((state) => state.userSignin);
   const { userInfo, loading, error } = userSignin;
 
   const dispatch = useDispatch();
@@ -19,7 +21,6 @@ export default function SigninScreen(props) {
     e.preventDefault();
     dispatch(signin(email, password));
   };
-
   useEffect(() => {
     if (userInfo) {
       props.history.push(redirect);
@@ -62,10 +63,10 @@ export default function SigninScreen(props) {
         <div>
           <label />
           <div>
-          New customer?{' '}
+            New customer?{' '}
             <Link to={`/register?redirect=${redirect}`}>
               Create your account
-            </Link>>
+            </Link>
           </div>
         </div>
       </form>

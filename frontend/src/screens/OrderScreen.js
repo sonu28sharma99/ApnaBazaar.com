@@ -8,12 +8,12 @@ import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import { ORDER_PAY_RESET } from '../constants/orderConstants';
 
-
 export default function OrderScreen(props) {
   const orderId = props.match.params.id;
   const [sdkReady, setSdkReady] = useState(false);
   const orderDetails = useSelector((state) => state.orderDetails);
   const { order, loading, error } = orderDetails;
+
   const orderPay = useSelector((state) => state.orderPay);
   const {
     loading: loadingPay,
@@ -50,6 +50,7 @@ export default function OrderScreen(props) {
   const successPaymentHandler = (paymentResult) => {
     dispatch(payOrder(order, paymentResult));
   };
+
   return loading ? (
     <LoadingBox></LoadingBox>
   ) : error ? (
@@ -113,8 +114,9 @@ export default function OrderScreen(props) {
                             {item.name}
                           </Link>
                         </div>
+
                         <div>
-                          {item.qty} x 	&#8377;{item.price} = 	&#8377;{item.qty * item.price}
+                          {item.qty} x ${item.price} = ${item.qty * item.price}
                         </div>
                       </div>
                     </li>
@@ -133,19 +135,19 @@ export default function OrderScreen(props) {
               <li>
                 <div className="row">
                   <div>Items</div>
-                  <div>	&#8377;{order.itemsPrice.toFixed(2)}</div>
+                  <div>${order.itemsPrice.toFixed(2)}</div>
                 </div>
               </li>
               <li>
                 <div className="row">
                   <div>Shipping</div>
-                  <div>	&#8377;{order.shippingPrice.toFixed(2)}</div>
+                  <div>${order.shippingPrice.toFixed(2)}</div>
                 </div>
               </li>
               <li>
                 <div className="row">
                   <div>Tax</div>
-                  <div>	&#8377;{order.taxPrice.toFixed(2)}</div>
+                  <div>${order.taxPrice.toFixed(2)}</div>
                 </div>
               </li>
               <li>
@@ -154,7 +156,7 @@ export default function OrderScreen(props) {
                     <strong> Order Total</strong>
                   </div>
                   <div>
-                    <strong>	&#8377;{order.totalPrice.toFixed(2)}</strong>
+                    <strong>${order.totalPrice.toFixed(2)}</strong>
                   </div>
                 </div>
               </li>
@@ -164,16 +166,16 @@ export default function OrderScreen(props) {
                     <LoadingBox></LoadingBox>
                   ) : (
                     <>
-                    {errorPay && (
-                      <MessageBox variant="danger">{errorPay}</MessageBox>
-                    )}
-                    {loadingPay && <LoadingBox></LoadingBox>}
+                      {errorPay && (
+                        <MessageBox variant="danger">{errorPay}</MessageBox>
+                      )}
+                      {loadingPay && <LoadingBox></LoadingBox>}
 
-                    <PayPalButton
-                      amount={order.totalPrice}
-                      onSuccess={successPaymentHandler}
-                    ></PayPalButton>
-                  </>
+                      <PayPalButton
+                        amount={order.totalPrice}
+                        onSuccess={successPaymentHandler}
+                      ></PayPalButton>
+                    </>
                   )}
                 </li>
               )}

@@ -6,7 +6,7 @@ body {
   margin: 0;
   height: 100vh;
   font-size: 1.6rem;
-  font-family: Helvetica, Roboto, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -18,9 +18,9 @@ body {
 .grid-container {
   display: grid;
   grid-template-areas:
-    "header"
-    "main"
-    "footer";
+    'header'
+    'main'
+    'footer';
   grid-template-columns: 1fr;
   grid-template-rows: 5rem 1fr 5rem;
   height: 100%;
@@ -70,7 +70,7 @@ button {
   border-radius: 0.5rem;
   border: 0.1rem #a4a4a4 solid;
   font-size: 1.6rem;
-  font-family: Helvetica, Roboto, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -93,7 +93,6 @@ button.block {
 button.small {
   font-size: 1.2rem;
 }
-
 /* Header */
 header a {
   color: #ffffff;
@@ -197,12 +196,10 @@ img.large {
   color: #a02020;
   background-color: #ffe0e0;
 }
-
 .alert-success {
   color: #20a020;
   background-color: #eeffe0;
 }
-
 /* Form */
 .form {
   max-width: 60rem;
@@ -216,7 +213,6 @@ img.large {
 .form label {
   margin: 1rem 0;
 }
-
 /* Dropdown */
 .dropdown {
   display: inline-block;
@@ -237,19 +233,17 @@ img.large {
 .dropdown:hover .dropdown-content {
   display: block;
 }
-
-/* Checkout steps */
+/* Checkout Steps */
 .checkout-steps > div {
   border-top: 0.3rem #c0c0c0 solid;
   color: #c0c0c0;
   flex: 1;
   padding: 1rem;
+  font-weight: bold;
 }
-
 .checkout-steps > div.active {
   border-top-color: #f08000;
   color: #f08000;
-  font-weight: bold;
 }
 /* Table */
 .table {

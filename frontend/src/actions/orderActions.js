@@ -80,7 +80,6 @@ export const payOrder = (order, paymentResult) => async (
     dispatch({ type: ORDER_PAY_FAIL, payload: message });
   }
 };
-
 export const listOrderMine = () => async (dispatch, getState) => {
   dispatch({ type: ORDER_MINE_LIST_REQUEST });
   const {
