@@ -1,4 +1,4 @@
-# Amazona ECommerce Website
+# FULLY FUNCTIONAL ECOMMERCE WEBSITE USING MERN STACK
 ![amazona](https://raw.githubusercontent.com/basir/amazona/master/template/images/amazona.jpg)
 
 
